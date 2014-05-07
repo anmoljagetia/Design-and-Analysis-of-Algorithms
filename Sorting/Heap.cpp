@@ -34,6 +34,7 @@ void buildMaxHeap (int a[], int n)
 	}
 }
 
+
 void heapsort (int a[])
 {
 	int n, i;
