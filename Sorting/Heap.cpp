@@ -27,9 +27,9 @@ void heapify (int a[], int i, int n)
 void buildMaxHeap (int a[], int n) 
 {
 	int i;
-	//only for non leaf nodes.
+	//only for non-leaf nodes.
 	//we will call heapify upon each one of them.
-	for (i = (SIZE/2) ; i > 0; i--) {
+	for (i = (SIZE/2) ; i >= 0; i--) {
 		heapify(a, i, n);
 	}
 }
@@ -38,13 +38,13 @@ void heapsort (int a[])
 {
 	int n, i;
 	n = SIZE;
-	buildMaxHeap(a, n);
-	for (i = SIZE; i >= 1; i--) {
+	buildMaxHeap(a, n - 1);
+	for (i = SIZE - 1; i > 0; i--) {
 		swap (a[0], a[i]);
 		n--;
 		//extract the root of the tree and then put the last element in its place
 		// then call upon heapify again to restore heap property
-		heapify(a, 0, n);
+		heapify(a, 0, n - 1);
 	}
 }
 
