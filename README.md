@@ -22,7 +22,9 @@ To Do
 Additional To do's include covering codes on
 1. Greedy Algorithms
 2. Dynamic Programming
-
+3. Divide and conquer
+4. Graphs
+5. Trees 
 
 
 
