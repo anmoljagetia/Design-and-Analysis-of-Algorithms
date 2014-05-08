@@ -1,25 +1,37 @@
 #include <iostream>
-#include <stack>
 #include <vector>
-
 using namespace std;
+
+void dfsVisit (vector<int> v[], int u, int visit[], int n);
+
+void dfsVisit (vector<int> v[], int u, int visit[], int n)
+{
+	int i, j;
+	visit[u] = 0;
+	
+	for (j = 0; j < v[u].size(); j++) {
+		if (visit[v[u][j]] == -1) {
+			dfsVisit(v, v[u][j], visit, n);
+		}
+	}
+	visit[u] = 1;
+	cout << u << " ";
+}
+
 
 int main(int argc, char const *argv[])
 {
 	#ifndef ONLINE_JUDGE
 	freopen("in.txt", "r", stdin);
 	#endif
-	stack<int> s;
-	int i, n, e, x, y, cv, f;
-	cv = 1;
+
+	int i, n, e, x, y, cv, j;
 	cout << "Enter no of nodes" << endl;
 	cin >> n;
 
 	cout << "Enter no of edges" << endl;
 	cin >> e;
-
-	vector<int> visit;
-
+	int visit[n + 1];
 	vector<int> v[n + 1];
 	//created an array of vectors to store the adjacency list n is equal to no of nodes
 	//each row of this adjacency list shows the conencted edges of that particular vertex 
@@ -31,12 +43,16 @@ int main(int argc, char const *argv[])
 		v[y].push_back(x); 
 	}
 
-	s.push(cv);
-	cout << "BFS of the given graph \n";
-	while(s.size() != n) {
-		f = (int)s.pop();
-		x = v[f][0];
+	for (i = 1; i <= n; i++) {
+		visit[i] = -1;
 	}
 
+	for (i = 1; i <= n; i++) {
+		for (j = 0; j < v[i].size(); j++) {
+			if (visit[v[i][j]] == -1) {
+				dfsVisit(v, v[i][j], visit, n);
+			}
+		}
+	}
 	return 0;
 }
