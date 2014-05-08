@@ -18,10 +18,10 @@ int main(int argc, char const *argv[])
 	}
 
 	if(j == -1) {
-		cout<<"Element not found"<<endl;
+		cout << "Element not found" << endl;
 	}
 	else {
-		cout<<"Element found at "<<j<<"th index of array"<<endl;
+		cout << "Element found at " << j << "th index of array" << endl;
 	}
 
 	return 0;

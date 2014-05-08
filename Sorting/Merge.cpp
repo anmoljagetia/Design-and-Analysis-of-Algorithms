@@ -59,7 +59,7 @@ int main()
 
 	// printing sorted array
 	for (i = 0; i < SIZE; i++) {
-		cout<<a[i]<<"\t";
+		cout << a[i] << "\t";
 	}
 	return 0;
 }

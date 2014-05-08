@@ -8,7 +8,7 @@ int Bsearch (int a[], int k, int p, int r)
 		int m;
 		m = (p + r)/2;
 		if (a[m] == k) {
-			cout<<"ELement Found at "<<m<<"th index"<<endl;
+			cout << "ELement Found at " << m << "th index" << endl;
 			return 1;
 		}
 		else if (k < a[m]) {
@@ -24,7 +24,7 @@ int Bsearch (int a[], int k, int p, int r)
 void status (int s)
 {
 	if (s == 0) {
-		cout<<"Element not found"<<endl;
+		cout << "Element not found" << endl;
 	}
 }
 
