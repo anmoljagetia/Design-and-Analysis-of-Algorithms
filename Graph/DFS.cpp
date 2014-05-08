@@ -18,19 +18,9 @@ void dfsVisit (vector<int> v[], int u, int visit[], int n)
 	cout << u << " ";
 }
 
-
-int main(int argc, char const *argv[])
+void dfs(int n, int e)
 {
-	#ifndef ONLINE_JUDGE
-	freopen("in.txt", "r", stdin);
-	#endif
-
-	int i, n, e, x, y, cv, j;
-	cout << "Enter no of nodes" << endl;
-	cin >> n;
-
-	cout << "Enter no of edges" << endl;
-	cin >> e;
+	int i, j, x, y;
 	int visit[n + 1];
 	vector<int> v[n + 1];
 	//created an array of vectors to store the adjacency list n is equal to no of nodes
@@ -54,5 +44,21 @@ int main(int argc, char const *argv[])
 			}
 		}
 	}
+}
+
+
+int main(int argc, char const *argv[])
+{
+	#ifndef ONLINE_JUDGE
+	freopen("in.txt", "r", stdin);
+	#endif
+
+	int i, n, e, x, y, cv, j;
+	cout << "Enter no of nodes" << endl;
+	cin >> n;
+
+	cout << "Enter no of edges" << endl;
+	cin >> e;
+	dfs(n, e);
 	return 0;
 }
