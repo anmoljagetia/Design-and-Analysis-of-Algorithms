@@ -2,8 +2,6 @@
 #include <vector>
 using namespace std;
 
-void dfsVisit (vector<int> v[], int u, int visit[], int n);
-
 void dfsVisit (vector<int> v[], int u, int visit[], int n)
 {
 	int i, j;
