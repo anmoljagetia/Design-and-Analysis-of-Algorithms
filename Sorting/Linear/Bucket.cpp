@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
 	}
 	
 	// printing the sorted output
-	for(i = 0; i < 10; i++) {
+	for(i = 0; i <= 10; i++) {
 		for (it = b[i].begin(); it != b[i].end(); it++) {
 			cout << ' ' << *it;
 		}
