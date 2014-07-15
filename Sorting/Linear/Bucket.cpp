@@ -38,7 +38,6 @@ int main(int argc, char const *argv[])
 		if (c != 1) {
 			b[k].push_back(a);
 		}
-	
 	}
 	
 	// printing the sorted output
